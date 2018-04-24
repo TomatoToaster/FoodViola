@@ -1,0 +1,3 @@
+var KEYS = {
+  GOOGLE_MAPS: 'Whatever It Is'
+}
