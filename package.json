@@ -4,6 +4,7 @@
   "description": "A project aiming to help visualize the food inspection situation in Boston, MA.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

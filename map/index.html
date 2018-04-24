@@ -11,7 +11,6 @@
   <body>
     <h3>My Google Maps Demo</h3>
     <div id="map"></div>
-    <script type='text/javascript' src='../config.js'></script>
     <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -61,13 +60,8 @@
       ]
     </script>
     <script type='text/javascript' src='MapClustering/markerclusterer.js'></script>
-    <script>
-      // need to do this to sneakily use my api key
-      var scrip = document.createElement('script')
-      scrip.src = "https://maps.googleapis.com/maps/api/js?key=" + KEYS.GOOGLE_MAPS + "&callback=initMap";
-      scrip.async = true;
-      scrip.defer = true;
-      document.body.appendChild(scrip);
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClW25CObicg2mBUGPqXxB0299kVHLnpK4&callback=initMap">
     </script>
   </body>
 </html>
