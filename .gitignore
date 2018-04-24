@@ -2,3 +2,5 @@
 data/*
 .RData
 .Rhistory
+config.js
+node_modules
