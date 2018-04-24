@@ -13,7 +13,7 @@ filtered <- dplyr::filter(food_viola, ViolStatus == 'Fail' & Location != '')
 df<- ddply(filtered,
   .(businessName, LegalOwner, NameLast, NameFirst, LICENSENO, Address, CITY, STATE, ZIP, Location),
   summarise,
-  Severit = length(businessName))
+  Severity = length(businessName))
 
 df <- df %>% tidyr::extract(Location, c("lat", "lng"), "\\(([^,]+), ([^)]+)\\)")
 

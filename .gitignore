@@ -3,3 +3,4 @@ data/*
 .RData
 .Rhistory
 node_modules
+FoodViolationData.geojson
