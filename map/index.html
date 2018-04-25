@@ -213,22 +213,7 @@
         }
       }
 
-      /**
-       * Function for when all types of points are visible and categorically weighted
-       * @param  {[type]} feature [description]
-       * @return {[type]}         [description]
-       */
-      var showAllCategoricalStyle = function(feature) {
-        var score = feature.getProperty('Score');
-        var category = feature.getProperty("Category");
-        var categoryHigh = STATISTICS[category].maxScore;
-        var categoryLow = STATISTICS[category].minScore;
-        var categoryAverage = STATISTICS[category].average;
-        var icon_text = 'icons/regular_'+ getCategory(score, categoryAverage, categoryLow, categoryHigh) +'.png';
-        return {
-          icon: icon_text
-        };
-      }
+
       /**
        * Function for when all types of points are visible and weighted as a whole
        * @param  {[type]} feature [description]
@@ -243,6 +228,22 @@
         var categoryHigh = STATISTICS['all'].maxScore;
         var categoryLow = STATISTICS['all'].minScore;
         var categoryAverage = STATISTICS['all'].average;
+        var icon_text = 'icons/regular_'+ getCategory(score, categoryAverage, categoryLow, categoryHigh) +'.png';
+        return {
+          icon: icon_text
+        };
+      }
+      /**
+       * Function for when all types of points are visible and categorically weighted
+       * @param  {[type]} feature [description]
+       * @return {[type]}         [description]
+       */
+      var showAllCategoricalStyle = function(feature) {
+        var score = feature.getProperty('Score');
+        var category = feature.getProperty("Category");
+        var categoryHigh = STATISTICS[category].maxScore;
+        var categoryLow = STATISTICS[category].minScore;
+        var categoryAverage = STATISTICS[category].average;
         var icon_text = 'icons/regular_'+ getCategory(score, categoryAverage, categoryLow, categoryHigh) +'.png';
         return {
           icon: icon_text
