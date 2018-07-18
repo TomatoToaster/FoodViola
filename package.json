@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "download": "bash download.sh",
     "convert-csv": "csv2geojson data/FoodViolationData.csv > public/FoodViolationData.geojson",
     "convert-all-data": "Rscript ConvertData.R && npm run convert-csv",
     "test": "echo \"Error: no test specified\" && exit 1"
