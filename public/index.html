@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 500px;
+        width: 100%;
+       }
+       .map-control {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+        font-family: 'Roboto','sans-serif';
+        margin: 10px;
+        padding-right: 5px;
+        /* Hide the control initially, to prevent it from appearing
+           before the map loads. */
+        display: none;
+      }
+      /* Display the control once it is inside the map. */
+      #map .map-control { display: block; }
+
+      .selector-control {
+        font-size: 14px;
+        line-height: 30px;
+        vertical-align: baseline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script src='map.js'></script>
+    <script type='text/javascript' src='MapClustering/markerclusterer.js'></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClW25CObicg2mBUGPqXxB0299kVHLnpK4&callback=initMap">
+    </script>
+    <div id="style-selector-control" class="map-control">
+      <input type="radio" name="toggle-show" id="show-all"
+          class="selector-control" checked="checked">
+      <label for="show-all">All</label>
+      <input type="radio" name="toggle-show" id="show-all-categorical"
+          class="selector-control">
+      <label for="show-all-categorical">All Categorical</label>
+      <input type="radio" name="toggle-show" id="show-regular"
+          class="selector-control">
+      <label for="show-regular">Eating & Drinking</label>
+
+      <input type="radio" name="toggle-show" id="show-regular-takeout"
+          class="selector-control">
+      <label for="show-regular-takeout">Eating & Drinking w/ Take Out</label>
+
+      <input type="radio" name="toggle-show" id="show-retail"
+          class="selector-control">
+      <label for="show-retail">Retail Food</label>
+
+      <input type="radio" name="toggle-show" id="show-only-takeout"
+          class="selector-control">
+      <label for="show-only-takeout">Mobile Food Walk On</label>
+    </div>
+    <table id="stats"></table>
+    <a href="https://github.com/TomatoToaster/FoodViola" target="_blank">Link to Repo</a>
+  </body>
+</html>
